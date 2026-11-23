@@ -1,0 +1,217 @@
+/* Estilos generales y fondo personalizado con fondo.jpg */
+body {
+    font-family: Arial, Verdana, sans-serif;
+    /* Se utiliza tu imagen "fondo.jpg" de fondo de pantalla */
+    background: linear-gradient(rgba(0, 18, 25, 0.4), rgba(0, 18, 25, 0.65)), url('imagenes/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(0, 18, 25, 0.85);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.15rem;
+    color: #94d2bd;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    /* Fondo semi-translúcido (Efecto cristal esmerilado para lectura fácil sobre la imagen) */
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+/* Distribución coherente en columnas para texto e imágenes */
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Alterna la posición de la imagen en las secciones pares */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    max-height: 260px;
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #005f73;
+    border-bottom: 2px solid #94d2bd;
+    padding-bottom: 0.3rem;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #005f73;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(248, 249, 250, 0.85);
+}
+
+/* Estilos para la sección de la calculadora (Formularios) */
+.calculator-box {
+    background: linear-gradient(135deg, rgba(240, 248, 255, 0.9) 0%, rgba(224, 251, 252, 0.9) 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 6px solid #005f73;
+    margin-top: 2rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.calculator-box h2 {
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #003049;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #94d2bd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0a9396;
+    transform: translateY(-1px);
+}
+
+#result-box {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background-color: #ffffff;
+    border: 1px solid #94d2bd;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #001219;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1.8rem;
+    background-color: rgba(0, 18, 25, 0.95);
+    color: #e0fbfc;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ae2012;
+}
+
+/* Adaptabilidad para dispositivos móviles o pantallas pequeñas */
+@media (max-width: 768px) {
+    .content-section, .content-section.reverse {
+        flex-direction: column;
+    }
+}

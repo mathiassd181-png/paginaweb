@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentaciòn de Mathias Silva</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>INFRAESTRUCUTA DE REDES Y CONECTIVIDAD</h1>
+        <p>Una guía esencial sobre Routers, Medios de Transmisión y Ancho de Banda</p>
+    </header>
+
+
+    <main>
+        <!-- Sección 1 con imagen1.jpg -->
+        <section class="content-section">
+            <div class="text-content">
+                <h2>1. ¿Qué es un Router?</h2>
+                <p>Un <strong>router (enrutador)</strong> es un dispositivo de red hardware que se encarga de dirigir el tráfico de datos entre diferentes redes (por ejemplo, conectando la red de tu hogar u oficina con Internet a través de tu Proveedor de Servicios de Internet o ISP).</p>
+                <p>Funciones principales de un router:</p>
+                <ul>
+                    <li><strong>Conectividad WAN/LAN:</strong> Recibe la señal externa del proveedor y la distribuye localmente por cable Ethernet o Wi-Fi.</li>
+                    <li><strong>Asignación IP (DHCP):</strong> Asigna direcciones IP únicas a cada dispositivo conectado en la red local.</li>
+                    <li><strong>Seguridad básica:</strong> Incorpora cortafuegos (firewalls) y traducción de direcciones de red (NAT) para proteger la red interna.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="imagenes/imagen1.jpg" alt="Dispositivo Router de red">
+            </div>
+        </section>
+
+
+        <!-- Sección 2 con cable.jpg (diseño alternado en espejo) -->
+        <section class="content-section reverse">
+            <div class="text-content">
+                <h2>2. Cables de Internet y Ethernet</h2>
+                <p>El medio físico por el cual viajan los datos influye de manera directa en la estabilidad y velocidad de la conexión. Los cables de par trenzado (categorías UTP) son los más utilizados en redes locales:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Velocidad Máxima</th>
+                            <th scope="col">Ancho de Banda</th>
+                            <th scope="col">Uso Habitual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Cat 5e</th>
+                            <td>1 Gbps</td>
+                            <td>100 MHz</td>
+                            <td>Redes domésticas estándar y oficinas.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cat 6</th>
+                            <td>1 Gbps (hasta 10 Gbps en corta distancia)</td>
+                            <td>250 MHz</td>
+                            <td>Streaming en 4K, gaming y redes Gigabit.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cat 6a</th>
+                            <td>10 Gbps</td>
+                            <td>500 MHz</td>
+                            <td>Centros de datos y redes empresariales exigentes.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cat 7</th>
+                            <td>10 Gbps+</td>
+                            <td>600 MHz</td>
+                            <td>Blindaje superior contra interferencias electromagnéticas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="image-content">
+                <img src="imagenes/cable.jpg" alt="Cables Ethernet de red">
+            </div>
+        </section>
+
+
+        <!-- Sección 3 con velocidad.jpg -->
+        <section class="content-section">
+            <div class="text-content">
+                <h2>3. Velocidad de Internet y Ancho de Banda</h2>
+                <p>Cuando hablamos de la velocidad de conexión, es importante diferenciar entre los conceptos clave que afectan la experiencia del usuario:</p>
+                <ul>
+                    <li><strong>Ancho de Banda (Bandwidth):</strong> Es la cantidad máxima de datos que pueden viajar a través de tu conexión en un segundo, medido comúnmente en Megabits por segundo (<span class="highlight">Mbps</span>).</li>
+                    <li><strong>Latencia (Ping):</strong> Es el tiempo que tardan los paquetes de datos en viajar desde tu dispositivo hasta el servidor de destino y viceversa. Se mide en milisegundos (ms). Una baja latencia es vital para videollamadas y videojuegos en línea.</li>
+                    <li><strong>Velocidad de Bajada (Download) vs. Subida (Upload):</strong> La bajada determina qué tan rápido descargas archivos o ves contenido en streaming, mientras que la subida afecta al enviar archivos, hacer streaming en vivo o participar en videoconferencias.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="imagenes/velocidad.jpg" alt="Medidor de velocidad de internet">
+            </div>
+        </section>
+
+        
+        <!-- Sección interactiva de la calculadora -->
+        <section class="calculator-box">
+            <h2>4. Calculadora de Tiempo de Descarga</h2>
+            <p>Calcula cuánto tardará en descargarse un archivo según la velocidad real de tu conexión (recuerda que 1 Byte = 8 bits).</p>
+            
+            <form id="download-form">
+                <div class="form-group">
+                    <label for="file-size">Tamaño del archivo (en GB):</label>
+                    <input type="number" id="file-size" step="0.1" min="0.1" placeholder="Ej. 50" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="net-speed">Velocidad de tu Internet (en Mbps):</label>
+                    <input type="number" id="net-speed" step="1" min="1" placeholder="Ej. 300" required>
+                </div>
+
+                <button type="submit">Calcular Tiempo</button>
+            </form>
+
+            <div id="result-box" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Proyecto de Redes y Diseño Web Estructurado</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
